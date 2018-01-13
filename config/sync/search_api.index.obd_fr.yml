@@ -400,6 +400,8 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: status
     type: boolean
+    indexed_locked: true
+    type_locked: true
   field_ready_to_publish:
     label: 'Ready to Publish'
     datasource_id: 'entity:node'
@@ -549,6 +551,20 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_curated_keywords
+  uid:
+    label: null
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
 datasource_settings:
   'entity:node':
     bundles:
@@ -572,8 +588,381 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   rendered_item: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  entity_status: {  }
+  highlight:
+    highlight: always
+    highlight_partial: true
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  html_filter:
+    all_fields: false
+    fields:
+      - field_author
+      - field_capacity
+      - type
+      - field_creator
+      - field_creator_1
+      - field_creator_user_id
+      - field_creator_user_id_1
+      - field_data_dict
+      - field_data_dict_1
+      - field_dataset_type_1
+      - field_doc_classification_code
+      - field_extras_doc_classification
+      - field_extras_keywords
+      - field_extras_keywords_1
+      - field_extras_notes_translated
+      - field_extras_notes_translated_1
+      - field_extras_usage_condition
+      - field_extras_usage_condition_1
+      - field_id
+      - field_keywords
+      - langcode
+      - langcode_1
+      - field_license_id
+      - field_license_title
+      - field_license_title_1
+      - field_license_url
+      - field_maintainer_email
+      - field_name
+      - field_notes
+      - field_notes_1
+      - field_org_section
+      - field_org_section_1
+      - field_res_description
+      - field_res_description_1
+      - field_res_name
+      - field_site_id
+      - field_state
+      - field_state_1
+      - field_state_2
+      - field_subject
+      - field_text
+      - field_text_1
+      - field_title
+      - title
+      - field_version
+      - field_synonyms
+    title: true
+    alt: true
+    tags:
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+      b: 2
+      em: 1
+      u: 1
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+  ignorecase:
+    all_fields: true
+    fields:
+      - field_author
+      - field_capacity
+      - type
+      - field_creator
+      - field_creator_1
+      - field_creator_user_id
+      - field_creator_user_id_1
+      - field_data_dict
+      - field_data_dict_1
+      - field_dataset_type_1
+      - field_doc_classification_code
+      - field_extras_doc_classification
+      - field_extras_keywords
+      - field_extras_keywords_1
+      - field_extras_notes_translated
+      - field_extras_notes_translated_1
+      - field_extras_usage_condition
+      - field_extras_usage_condition_1
+      - field_id
+      - field_keywords
+      - langcode
+      - langcode_1
+      - field_license_id
+      - field_license_title
+      - field_license_title_1
+      - field_license_url
+      - field_maintainer_email
+      - field_name
+      - field_notes
+      - field_notes_1
+      - field_org_section
+      - field_org_section_1
+      - field_res_description
+      - field_res_description_1
+      - field_res_name
+      - field_site_id
+      - field_state
+      - field_state_1
+      - field_state_2
+      - field_subject
+      - field_text
+      - field_text_1
+      - field_title
+      - title
+      - field_version
+      - field_synonyms
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  ignore_character:
+    all_fields: true
+    fields:
+      - field_author
+      - field_capacity
+      - type
+      - field_creator
+      - field_creator_1
+      - field_creator_user_id
+      - field_creator_user_id_1
+      - field_data_dict
+      - field_data_dict_1
+      - field_dataset_type_1
+      - field_doc_classification_code
+      - field_extras_doc_classification
+      - field_extras_keywords
+      - field_extras_keywords_1
+      - field_extras_notes_translated
+      - field_extras_notes_translated_1
+      - field_extras_usage_condition
+      - field_extras_usage_condition_1
+      - field_id
+      - field_keywords
+      - langcode
+      - langcode_1
+      - field_license_id
+      - field_license_title
+      - field_license_title_1
+      - field_license_url
+      - field_maintainer_email
+      - field_name
+      - field_notes
+      - field_notes_1
+      - field_org_section
+      - field_org_section_1
+      - field_res_description
+      - field_res_description_1
+      - field_res_name
+      - field_site_id
+      - field_state
+      - field_state_1
+      - field_state_2
+      - field_subject
+      - field_text
+      - field_text_1
+      - field_title
+      - title
+      - field_version
+      - field_synonyms
+    ignorable: '[''¿¡!?,.:;]'
+    strip:
+      character_sets:
+        Pc: Pc
+        Pd: Pd
+        Pe: Pe
+        Pf: Pf
+        Pi: Pi
+        Po: Po
+        Ps: Ps
+        Cc: 0
+        Cf: 0
+        Co: 0
+        Mc: 0
+        Me: 0
+        Mn: 0
+        Sc: 0
+        Sk: 0
+        Sm: 0
+        So: 0
+        Zl: 0
+        Zp: 0
+        Zs: 0
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+  stemmer:
+    all_fields: true
+    fields:
+      - field_author
+      - field_capacity
+      - field_creator
+      - field_creator_1
+      - field_data_dict
+      - field_data_dict_1
+      - field_doc_classification_code
+      - field_extras_doc_classification
+      - field_extras_keywords
+      - field_extras_keywords_1
+      - field_extras_notes_translated
+      - field_extras_notes_translated_1
+      - field_extras_usage_condition
+      - field_extras_usage_condition_1
+      - field_keywords
+      - field_license_id
+      - field_license_title
+      - field_license_title_1
+      - field_license_url
+      - field_name
+      - field_notes
+      - field_notes_1
+      - field_org_section
+      - field_org_section_1
+      - field_res_description
+      - field_res_description_1
+      - field_res_name
+      - field_subject
+      - field_text
+      - field_text_1
+      - field_title
+      - title
+      - field_synonyms
+    exceptions:
+      texan: texa
+      mexican: mexic
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+  stopwords:
+    all_fields: true
+    fields:
+      - field_author
+      - field_capacity
+      - field_creator
+      - field_creator_1
+      - field_data_dict
+      - field_data_dict_1
+      - field_doc_classification_code
+      - field_extras_doc_classification
+      - field_extras_keywords
+      - field_extras_keywords_1
+      - field_extras_notes_translated
+      - field_extras_notes_translated_1
+      - field_extras_usage_condition
+      - field_extras_usage_condition_1
+      - field_keywords
+      - field_license_id
+      - field_license_title
+      - field_license_title_1
+      - field_license_url
+      - field_name
+      - field_notes
+      - field_notes_1
+      - field_org_section
+      - field_org_section_1
+      - field_res_description
+      - field_res_description_1
+      - field_res_name
+      - field_subject
+      - field_text
+      - field_text_1
+      - field_title
+      - title
+      - field_synonyms
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+    weights:
+      preprocess_index: -5
+      preprocess_query: -2
+  transliteration:
+    all_fields: true
+    fields:
+      - field_author
+      - field_capacity
+      - type
+      - field_creator
+      - field_creator_1
+      - field_creator_user_id
+      - field_creator_user_id_1
+      - field_data_dict
+      - field_data_dict_1
+      - field_dataset_type_1
+      - field_doc_classification_code
+      - field_extras_doc_classification
+      - field_extras_keywords
+      - field_extras_keywords_1
+      - field_extras_notes_translated
+      - field_extras_notes_translated_1
+      - field_extras_usage_condition
+      - field_extras_usage_condition_1
+      - field_id
+      - field_keywords
+      - langcode
+      - langcode_1
+      - field_license_id
+      - field_license_title
+      - field_license_title_1
+      - field_license_url
+      - field_maintainer_email
+      - field_name
+      - field_notes
+      - field_notes_1
+      - field_org_section
+      - field_org_section_1
+      - field_res_description
+      - field_res_description_1
+      - field_res_name
+      - field_site_id
+      - field_state
+      - field_state_1
+      - field_state_2
+      - field_subject
+      - field_text
+      - field_text_1
+      - field_title
+      - title
+      - field_version
+      - field_synonyms
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
 tracker_settings:
-  default: {  }
+  default:
+    indexing_order: fifo
 options:
   index_directly: true
   cron_limit: 50

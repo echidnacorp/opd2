@@ -712,7 +712,7 @@ processor_settings:
       preprocess_index: -6
       preprocess_query: -6
   transliteration:
-    all_fields: false
+    all_fields: true
     fields:
       - field_audience
       - field_author
@@ -741,6 +741,8 @@ processor_settings:
       - field_license_url
       - field_name
       - field_notes
+      - field_nu
+      - field_nu_1
       - field_org_section
       - field_res_description
       - field_res_name
@@ -757,11 +759,13 @@ processor_settings:
       - field_type
       - field_version
       - field_version_1
+      - field_synonyms
     weights:
       preprocess_index: -20
       preprocess_query: -20
 tracker_settings:
-  default: {  }
+  default:
+    indexing_order: fifo
 options:
   index_directly: true
   cron_limit: 50

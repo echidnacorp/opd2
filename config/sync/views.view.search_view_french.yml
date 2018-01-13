@@ -751,7 +751,17 @@ display:
           plugin_id: search_api_options
       sorts: {  }
       title: Rechercher
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Affichage de @start à @end sur @total'
+          plugin_id: result
       footer: {  }
       empty: {  }
       relationships: {  }
