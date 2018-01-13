@@ -1,0 +1,23 @@
+uuid: 3fc897eb-da35-4cb3-8fab-0ebd82111b1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ready_to_publish
+    - node.type.ckan_document
+id: node.ckan_document.field_ready_to_publish
+field_name: field_ready_to_publish
+entity_type: node
+bundle: ckan_document
+label: 'Ready to Publish'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

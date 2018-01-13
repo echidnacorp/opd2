@@ -1,0 +1,28 @@
+uuid: a8422c5c-594e-40b1-84ed-68bc899ec6fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.organization_fr
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: organization_2
+theme: bartik
+region: sidebar_second
+weight: -5
+provider: null
+plugin: 'facet_block:organization_fr'
+settings:
+  id: 'facet_block:organization_fr'
+  label: Organization
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /rechercher
+    negate: false
+    context_mapping: {  }

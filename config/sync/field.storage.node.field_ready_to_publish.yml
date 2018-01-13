@@ -1,0 +1,18 @@
+uuid: 40983d9c-7277-4e96-a23d-8c628537c419
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ready_to_publish
+field_name: field_ready_to_publish
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

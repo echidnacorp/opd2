@@ -1,0 +1,29 @@
+uuid: a5c55c9a-edc5-4d0e-b0b7-d063c81b133d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ckan_document.body
+    - node.type.ckan_document
+  module:
+    - text
+    - user
+id: node.ckan_document.teaser
+targetEntityType: node
+bundle: ckan_document
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

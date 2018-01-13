@@ -1,0 +1,21 @@
+uuid: 86df1d72-f00b-41ee-abd4-da7b11f989c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metadata_modified
+    - node.type.ckan_document
+  module:
+    - datetime
+id: node.ckan_document.field_metadata_modified
+field_name: field_metadata_modified
+entity_type: node
+bundle: ckan_document
+label: 'Metadata Modified'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

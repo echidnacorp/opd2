@@ -1,0 +1,19 @@
+uuid: 30e95465-84f7-4fcd-a000-96f7679b1f11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_extras_usage_condition
+    - node.type.ckan_document
+id: node.ckan_document.field_extras_usage_condition
+field_name: field_extras_usage_condition
+entity_type: node
+bundle: ckan_document
+label: 'Extras Usage Condition'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,19 @@
+uuid: e94bbbc5-1ea3-4d0d-9f95-aba29abc2eb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maintainer_email
+    - node.type.ckan_document
+id: node.ckan_document.field_maintainer_email
+field_name: field_maintainer_email
+entity_type: node
+bundle: ckan_document
+label: 'Maintainer email'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

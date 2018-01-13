@@ -1,0 +1,28 @@
+uuid: cc76a473-bb91-44bf-b0bf-6f1441ada743
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.curated_keywords_fr
+  module:
+    - facets
+    - system
+  theme:
+    - bartik
+id: curatedkeywords_2
+theme: bartik
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'facet_block:curated_keywords_fr'
+settings:
+  id: 'facet_block:curated_keywords_fr'
+  label: 'Popular Keywords'
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /rechercher
+    negate: false
+    context_mapping: {  }

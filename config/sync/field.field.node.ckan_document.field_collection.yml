@@ -1,0 +1,29 @@
+uuid: 2b116a3f-5de4-4292-bf26-1efd06b30cca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_collection
+    - node.type.ckan_document
+    - taxonomy.vocabulary.collection
+id: node.ckan_document.field_collection
+field_name: field_collection
+entity_type: node
+bundle: ckan_document
+label: Collection
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      collection: collection
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

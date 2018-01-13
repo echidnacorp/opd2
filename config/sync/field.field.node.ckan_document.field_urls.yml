@@ -1,0 +1,19 @@
+uuid: d17538c8-5d7f-4ce9-9a0e-11d5c9f4b58b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_urls
+    - node.type.ckan_document
+id: node.ckan_document.field_urls
+field_name: field_urls
+entity_type: node
+bundle: ckan_document
+label: Urls
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

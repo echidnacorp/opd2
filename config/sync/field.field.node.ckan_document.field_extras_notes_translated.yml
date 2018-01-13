@@ -1,0 +1,19 @@
+uuid: ea13c1bf-9d19-4dde-8409-73a3d9d3aa08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_extras_notes_translated
+    - node.type.ckan_document
+id: node.ckan_document.field_extras_notes_translated
+field_name: field_extras_notes_translated
+entity_type: node
+bundle: ckan_document
+label: 'Extras Notes Translated'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

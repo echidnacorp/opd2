@@ -1,0 +1,29 @@
+uuid: 78e75990-f4be-483f-87b7-bfc18db15b74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience
+    - node.type.ckan_document
+    - taxonomy.vocabulary.audience
+id: node.ckan_document.field_audience
+field_name: field_audience
+entity_type: node
+bundle: ckan_document
+label: Audience
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      audience: audience
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

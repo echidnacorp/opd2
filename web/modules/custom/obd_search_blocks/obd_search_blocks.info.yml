@@ -1,0 +1,5 @@
+name: OBD Search Blocks
+description: Provides custom search blocks to handle Search API search views.
+package: DE Custom
+type: module
+core: 8.x

@@ -1,0 +1,14 @@
+uuid: a25e7fa6-a2ea-4226-9162-2dadd9fca877
+name: 'obd 2'
+mail: drupal@echidna.ca
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

@@ -1,0 +1,19 @@
+uuid: efbaab52-922f-4557-adae-b32d463e0452
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_data_dict
+field_name: field_data_dict
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

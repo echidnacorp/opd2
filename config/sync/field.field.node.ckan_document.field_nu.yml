@@ -1,0 +1,29 @@
+uuid: 6b44aca0-c323-44ef-a700-91cd5c79259b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nu
+    - node.type.ckan_document
+    - taxonomy.vocabulary.num_tags
+id: node.ckan_document.field_nu
+field_name: field_nu
+entity_type: node
+bundle: ckan_document
+label: 'Num Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      num_tags: num_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 20f20233-1176-4971-b87a-f0c4632a94b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_res_name
+    - node.type.ckan_document
+id: node.ckan_document.field_res_name
+field_name: field_res_name
+entity_type: node
+bundle: ckan_document
+label: 'Res Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

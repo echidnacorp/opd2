@@ -1,0 +1,19 @@
+uuid: 9a6c0fe7-e7d9-49aa-94b8-0baba2c89b4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_size
+    - node.type.ckan_document
+id: node.ckan_document.field_file_size
+field_name: field_file_size
+entity_type: node
+bundle: ckan_document
+label: 'File Size'
+description: 'Document file size'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

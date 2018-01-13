@@ -1,0 +1,19 @@
+uuid: 57f9875f-62e8-435f-bd41-5f092aa62665
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_dict
+    - node.type.ckan_document
+id: node.ckan_document.field_data_dict
+field_name: field_data_dict
+entity_type: node
+bundle: ckan_document
+label: 'Data Dict'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

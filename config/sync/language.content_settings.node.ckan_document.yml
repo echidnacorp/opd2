@@ -1,0 +1,16 @@
+uuid: ff5460e4-de0c-4891-abbb-acc6b5331758
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ckan_document
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.ckan_document
+target_entity_type_id: node
+target_bundle: ckan_document
+default_langcode: site_default
+language_alterable: true

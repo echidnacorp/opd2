@@ -1,0 +1,22 @@
+uuid: 3fe23ddc-b203-4e54-9088-f951a6f4c70a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ckan_document
+  module:
+    - text
+id: node.ckan_document.body
+field_name: body
+entity_type: node
+bundle: ckan_document
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: c267e918-b1ad-46b1-a84a-b988c080e40e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_license_id
+    - node.type.ckan_document
+id: node.ckan_document.field_license_id
+field_name: field_license_id
+entity_type: node
+bundle: ckan_document
+label: 'License ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

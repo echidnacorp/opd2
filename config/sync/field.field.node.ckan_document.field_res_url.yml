@@ -1,0 +1,19 @@
+uuid: 6ab4fcd3-e0e1-4870-80e1-77fe58ab21fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_res_url
+    - node.type.ckan_document
+id: node.ckan_document.field_res_url
+field_name: field_res_url
+entity_type: node
+bundle: ckan_document
+label: 'Res URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,29 @@
+uuid: 6e4878a9-bb5e-4c5a-862b-a0bc12415e19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_catalogue_type
+    - node.type.ckan_document
+    - taxonomy.vocabulary.catalogue_type
+id: node.ckan_document.field_catalogue_type
+field_name: field_catalogue_type
+entity_type: node
+bundle: ckan_document
+label: 'Catalogue Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      catalogue_type: catalogue_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

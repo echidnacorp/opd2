@@ -1,0 +1,19 @@
+uuid: c88b0024-e1f8-46c9-950e-d7a34cfe54c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usage_condition
+    - node.type.ckan_document
+id: node.ckan_document.field_usage_condition
+field_name: field_usage_condition
+entity_type: node
+bundle: ckan_document
+label: 'Usage Condition'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

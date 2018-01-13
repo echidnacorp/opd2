@@ -1,0 +1,23 @@
+uuid: 9e8534ba-65f5-4567-8418-6b5500a26784
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_open
+    - node.type.ckan_document
+id: node.ckan_document.field_is_open
+field_name: field_is_open
+entity_type: node
+bundle: ckan_document
+label: 'Is Open'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

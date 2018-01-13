@@ -1,0 +1,516 @@
+uuid: 323e64da-ad04-4577-8586-dbd7adc9a7de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ckan_document.body
+    - field.field.node.ckan_document.field_audience
+    - field.field.node.ckan_document.field_author
+    - field.field.node.ckan_document.field_capacity
+    - field.field.node.ckan_document.field_catalogue_type
+    - field.field.node.ckan_document.field_collection
+    - field.field.node.ckan_document.field_creator
+    - field.field.node.ckan_document.field_creator_user_id
+    - field.field.node.ckan_document.field_curated_keywords
+    - field.field.node.ckan_document.field_data_dict
+    - field.field.node.ckan_document.field_dataset_type
+    - field.field.node.ckan_document.field_date_modified
+    - field.field.node.ckan_document.field_date_published
+    - field.field.node.ckan_document.field_doc_classification_code
+    - field.field.node.ckan_document.field_extras_date_published
+    - field.field.node.ckan_document.field_extras_doc_classification
+    - field.field.node.ckan_document.field_extras_keywords
+    - field.field.node.ckan_document.field_extras_notes_translated
+    - field.field.node.ckan_document.field_extras_usage_condition
+    - field.field.node.ckan_document.field_file_size
+    - field.field.node.ckan_document.field_id
+    - field.field.node.ckan_document.field_is_open
+    - field.field.node.ckan_document.field_keywords
+    - field.field.node.ckan_document.field_license_id
+    - field.field.node.ckan_document.field_license_title
+    - field.field.node.ckan_document.field_license_url
+    - field.field.node.ckan_document.field_maintainer_email
+    - field.field.node.ckan_document.field_metadata_created
+    - field.field.node.ckan_document.field_metadata_modified
+    - field.field.node.ckan_document.field_name
+    - field.field.node.ckan_document.field_notes
+    - field.field.node.ckan_document.field_nu
+    - field.field.node.ckan_document.field_num_resources
+    - field.field.node.ckan_document.field_org_section
+    - field.field.node.ckan_document.field_organization
+    - field.field.node.ckan_document.field_owner_organization
+    - field.field.node.ckan_document.field_private
+    - field.field.node.ckan_document.field_ready_to_publish
+    - field.field.node.ckan_document.field_res_description
+    - field.field.node.ckan_document.field_res_format
+    - field.field.node.ckan_document.field_res_name
+    - field.field.node.ckan_document.field_res_type
+    - field.field.node.ckan_document.field_res_url
+    - field.field.node.ckan_document.field_revision_id
+    - field.field.node.ckan_document.field_site_id
+    - field.field.node.ckan_document.field_state
+    - field.field.node.ckan_document.field_subject
+    - field.field.node.ckan_document.field_synonyms
+    - field.field.node.ckan_document.field_text
+    - field.field.node.ckan_document.field_title
+    - field.field.node.ckan_document.field_type
+    - field.field.node.ckan_document.field_urls
+    - field.field.node.ckan_document.field_usage_condition
+    - field.field.node.ckan_document.field_validated_data_dictionary
+    - field.field.node.ckan_document.field_version
+    - field.field.node.ckan_document.field_views_recent
+    - field.field.node.ckan_document.field_views_total
+    - node.type.ckan_document
+  module:
+    - datetime
+    - text
+    - user
+id: node.ckan_document.default
+targetEntityType: node
+bundle: ckan_document
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_audience:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_author:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_capacity:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_catalogue_type:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_collection:
+    weight: 154
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_creator:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_creator_user_id:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_curated_keywords:
+    weight: 159
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_data_dict:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_dataset_type:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date_modified:
+    weight: 110
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_published:
+    weight: 111
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_doc_classification_code:
+    weight: 112
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_extras_date_published:
+    weight: 152
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_extras_doc_classification:
+    weight: 153
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_extras_keywords:
+    weight: 113
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_extras_notes_translated:
+    weight: 114
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_extras_usage_condition:
+    weight: 115
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_file_size:
+    weight: 158
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_id:
+    weight: 116
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_is_open:
+    weight: 117
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_keywords:
+    weight: 118
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_license_id:
+    weight: 119
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_license_title:
+    weight: 120
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_license_url:
+    weight: 121
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_maintainer_email:
+    weight: 122
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_metadata_created:
+    weight: 123
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_metadata_modified:
+    weight: 124
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_name:
+    weight: 125
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_notes:
+    weight: 126
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_nu:
+    weight: 128
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_num_resources:
+    weight: 127
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_org_section:
+    weight: 130
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_organization:
+    weight: 155
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_owner_organization:
+    weight: 156
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_private:
+    weight: 132
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ready_to_publish:
+    weight: 133
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_res_description:
+    weight: 134
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_res_format:
+    weight: 135
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_res_name:
+    weight: 136
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_res_type:
+    weight: 137
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_res_url:
+    weight: 138
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_revision_id:
+    weight: 139
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_site_id:
+    weight: 140
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_state:
+    weight: 141
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_subject:
+    weight: 142
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_synonyms:
+    weight: 157
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_text:
+    weight: 143
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_title:
+    weight: 144
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_type:
+    weight: 145
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_urls:
+    weight: 146
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_usage_condition:
+    weight: 147
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_validated_data_dictionary:
+    weight: 148
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_version:
+    weight: 149
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_views_recent:
+    weight: 150
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_views_total:
+    weight: 151
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,768 @@
+uuid: a214a1ce-134a-4450-8dd9-1fe8f5fdd0b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience
+    - field.storage.node.field_author
+    - field.storage.node.field_capacity
+    - field.storage.node.field_catalogue_type
+    - field.storage.node.field_collection
+    - field.storage.node.field_creator
+    - field.storage.node.field_creator_user_id
+    - field.storage.node.field_data_dict
+    - field.storage.node.field_dataset_type
+    - field.storage.node.field_date_modified
+    - field.storage.node.field_date_published
+    - field.storage.node.field_doc_classification_code
+    - field.storage.node.field_extras_date_published
+    - field.storage.node.field_extras_doc_classification
+    - field.storage.node.field_extras_keywords
+    - field.storage.node.field_extras_notes_translated
+    - field.storage.node.field_extras_usage_condition
+    - field.storage.node.field_id
+    - field.storage.node.field_is_open
+    - field.storage.node.field_keywords
+    - field.storage.node.field_license_id
+    - field.storage.node.field_license_title
+    - field.storage.node.field_license_url
+    - field.storage.node.field_name
+    - field.storage.node.field_notes
+    - field.storage.node.field_nu
+    - field.storage.node.field_org_section
+    - field.storage.node.field_private
+    - field.storage.node.field_ready_to_publish
+    - field.storage.node.field_res_description
+    - field.storage.node.field_res_name
+    - field.storage.node.field_site_id
+    - field.storage.node.field_state
+    - field.storage.node.field_subject
+    - field.storage.node.field_text
+    - field.storage.node.field_title
+    - field.storage.node.field_type
+    - field.storage.node.field_version
+    - field.storage.node.field_organization
+    - field.storage.node.field_synonyms
+    - field.storage.node.field_curated_keywords
+    - search_api.server.obd_en
+  module:
+    - search_api_solr
+    - search_api
+    - node
+    - taxonomy
+id: obd_en
+name: obd_en
+description: ''
+read_only: false
+field_settings:
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  field_audience:
+    label: Audience
+    datasource_id: 'entity:node'
+    property_path: field_audience
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_audience
+  field_author:
+    label: Author
+    datasource_id: 'entity:node'
+    property_path: field_author
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_author
+  field_capacity:
+    label: Capacity
+    datasource_id: 'entity:node'
+    property_path: field_capacity
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_capacity
+  field_catalogue_type:
+    label: 'Catalogue Type'
+    datasource_id: 'entity:node'
+    property_path: field_catalogue_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_catalogue_type
+  field_collection:
+    label: Collection
+    datasource_id: 'entity:node'
+    property_path: field_collection
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_collection
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+  field_creator:
+    label: Creator
+    datasource_id: 'entity:node'
+    property_path: field_creator
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_creator
+  field_creator_user_id:
+    label: 'Creator User ID'
+    datasource_id: 'entity:node'
+    property_path: field_creator_user_id
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator_user_id
+  field_creator_user_id_1:
+    label: 'Creator User ID'
+    datasource_id: 'entity:node'
+    property_path: field_creator_user_id
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator_user_id
+  field_data_dict:
+    label: 'Data Dict'
+    datasource_id: 'entity:node'
+    property_path: field_data_dict
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_data_dict
+  field_data_dict_1:
+    label: 'Data Dict'
+    datasource_id: 'entity:node'
+    property_path: field_data_dict
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_data_dict
+  field_dataset_type:
+    label: 'Dataset Type'
+    datasource_id: 'entity:node'
+    property_path: field_dataset_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_dataset_type
+  field_dataset_type_1:
+    label: 'Dataset Type'
+    datasource_id: 'entity:node'
+    property_path: field_dataset_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_dataset_type
+  field_date_modified:
+    label: 'Date modified'
+    datasource_id: 'entity:node'
+    property_path: field_date_modified
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_modified
+  field_date_modified_1:
+    label: 'Date modified'
+    datasource_id: 'entity:node'
+    property_path: field_date_modified
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_modified
+  field_date_published:
+    label: 'Date published'
+    datasource_id: 'entity:node'
+    property_path: field_date_published
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_published
+  default_langcode:
+    label: 'Default translation'
+    datasource_id: 'entity:node'
+    property_path: default_langcode
+    type: boolean
+  field_doc_classification_code:
+    label: 'Doc Classification Code'
+    datasource_id: 'entity:node'
+    property_path: field_doc_classification_code
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_doc_classification_code
+  field_doc_classification_code_1:
+    label: 'Doc Classification Code'
+    datasource_id: 'entity:node'
+    property_path: field_doc_classification_code
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_doc_classification_code
+  field_extras_date_published:
+    label: 'Extras Date Published'
+    datasource_id: 'entity:node'
+    property_path: field_extras_date_published
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_extras_date_published
+  field_extras_doc_classification:
+    label: 'Extras Doc Classification Code'
+    datasource_id: 'entity:node'
+    property_path: field_extras_doc_classification
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_extras_doc_classification
+  field_extras_keywords:
+    label: 'Extras Keywords'
+    datasource_id: 'entity:node'
+    property_path: field_extras_keywords
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_extras_keywords
+  field_extras_notes_translated:
+    label: 'Extras Notes Translated'
+    datasource_id: 'entity:node'
+    property_path: field_extras_notes_translated
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_extras_notes_translated
+  field_extras_notes_translated_1:
+    label: 'Extras Notes Translated'
+    datasource_id: 'entity:node'
+    property_path: field_extras_notes_translated
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_extras_notes_translated
+  field_extras_usage_condition:
+    label: 'Extras Usage Condition'
+    datasource_id: 'entity:node'
+    property_path: field_extras_usage_condition
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_extras_usage_condition
+  field_id:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: field_id
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_id
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+  field_is_open:
+    label: 'Is Open'
+    datasource_id: 'entity:node'
+    property_path: field_is_open
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_is_open
+  field_keywords:
+    label: Keywords
+    datasource_id: 'entity:node'
+    property_path: field_keywords
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_keywords
+  langcode:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+  field_license_id:
+    label: 'License ID'
+    datasource_id: 'entity:node'
+    property_path: field_license_id
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_license_id
+  field_license_title:
+    label: 'License Title'
+    datasource_id: 'entity:node'
+    property_path: field_license_title
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_license_title
+  field_license_title_1:
+    label: 'License Title'
+    datasource_id: 'entity:node'
+    property_path: field_license_title
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_license_title
+  field_license_url:
+    label: 'License URL'
+    datasource_id: 'entity:node'
+    property_path: field_license_url
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_license_url
+  field_name:
+    label: Name
+    datasource_id: 'entity:node'
+    property_path: field_name
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_name
+  field_notes:
+    label: Notes
+    datasource_id: 'entity:node'
+    property_path: field_notes
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_notes
+  field_nu:
+    label: 'Num Tags'
+    datasource_id: 'entity:node'
+    property_path: field_nu
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_nu
+  field_nu_1:
+    label: 'Num Tags'
+    datasource_id: 'entity:node'
+    property_path: field_nu
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_nu
+  field_org_section:
+    label: 'Org Section'
+    datasource_id: 'entity:node'
+    property_path: field_org_section
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_org_section
+  field_private:
+    label: Private
+    datasource_id: 'entity:node'
+    property_path: field_private
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_private
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+  field_ready_to_publish:
+    label: 'Ready to Publish'
+    datasource_id: 'entity:node'
+    property_path: field_ready_to_publish
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_ready_to_publish
+  field_ready_to_publish_1:
+    label: 'Ready to Publish'
+    datasource_id: 'entity:node'
+    property_path: field_ready_to_publish
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_ready_to_publish
+  field_res_description:
+    label: 'Res Description'
+    datasource_id: 'entity:node'
+    property_path: field_res_description
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_res_description
+  field_res_name:
+    label: 'Res Name'
+    datasource_id: 'entity:node'
+    property_path: field_res_name
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_res_name
+  field_site_id:
+    label: 'Site Id'
+    datasource_id: 'entity:node'
+    property_path: field_site_id
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_site_id
+  field_state:
+    label: State
+    datasource_id: 'entity:node'
+    property_path: field_state
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_state
+  field_subject:
+    label: Subject
+    datasource_id: 'entity:node'
+    property_path: field_subject
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_subject
+  field_subject_1:
+    label: Subject
+    datasource_id: 'entity:node'
+    property_path: field_subject
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_subject
+  field_text:
+    label: Text
+    datasource_id: 'entity:node'
+    property_path: field_text
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_text
+  field_text_1:
+    label: Text
+    datasource_id: 'entity:node'
+    property_path: field_text
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_text
+  field_title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: field_title
+    type: solr_text_ngram
+    dependencies:
+      config:
+        - field.storage.node.field_title
+  field_title_1:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: field_title
+    type: solr_text_ngram
+    boost: !!float 5
+    dependencies:
+      config:
+        - field.storage.node.field_title
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: solr_text_ngram
+    boost: !!float 5
+  title_1:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: solr_text_ngram
+    boost: !!float 5
+  title_2:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+  field_type:
+    label: Type
+    datasource_id: 'entity:node'
+    property_path: field_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_type
+  field_version:
+    label: Version
+    datasource_id: 'entity:node'
+    property_path: field_version
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_version
+  field_version_1:
+    label: Version
+    datasource_id: 'entity:node'
+    property_path: field_version
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_version
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  field_organization:
+    label: Organization
+    datasource_id: 'entity:node'
+    property_path: field_organization
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_organization
+  field_synonyms:
+    label: Synonyms
+    datasource_id: 'entity:node'
+    property_path: field_synonyms
+    type: solr_text_ngram
+    boost: !!float 8
+    dependencies:
+      config:
+        - field.storage.node.field_synonyms
+  field_curated_keywords:
+    label: 'Curated Keywords'
+    datasource_id: 'entity:node'
+    property_path: field_curated_keywords
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_curated_keywords
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - ckan_document
+    languages:
+      default: false
+      selected:
+        - en
+  'entity:taxonomy_term':
+    bundles:
+      default: true
+      selected:
+        - tags
+    languages:
+      default: false
+      selected:
+        - en
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  entity_status: {  }
+  highlight:
+    highlight: always
+    highlight_partial: true
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  ignorecase:
+    all_fields: false
+    fields:
+      - field_audience
+      - field_author
+      - field_capacity
+      - field_catalogue_type
+      - field_collection
+      - type
+      - field_creator
+      - field_creator_user_id
+      - field_creator_user_id_1
+      - field_data_dict
+      - field_data_dict_1
+      - field_doc_classification_code
+      - field_doc_classification_code_1
+      - field_extras_doc_classification
+      - field_extras_keywords
+      - field_extras_notes_translated
+      - field_extras_notes_translated_1
+      - field_extras_usage_condition
+      - field_id
+      - field_keywords
+      - langcode
+      - field_license_id
+      - field_license_title
+      - field_license_title_1
+      - field_license_url
+      - field_name
+      - field_notes
+      - field_org_section
+      - field_res_description
+      - field_res_name
+      - field_site_id
+      - field_subject
+      - field_subject_1
+      - field_text
+      - field_text_1
+      - field_title
+      - field_title_1
+      - title
+      - title_1
+      - title_2
+      - field_type
+      - field_version
+      - field_version_1
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  rendered_item: {  }
+  stemmer:
+    all_fields: false
+    fields:
+      - field_author
+      - field_capacity
+      - field_creator
+      - field_data_dict
+      - field_data_dict_1
+      - field_doc_classification_code
+      - field_doc_classification_code_1
+      - field_extras_doc_classification
+      - field_extras_keywords
+      - field_extras_notes_translated
+      - field_extras_notes_translated_1
+      - field_extras_usage_condition
+      - field_keywords
+      - field_license_id
+      - field_license_title
+      - field_license_title_1
+      - field_license_url
+      - field_name
+      - field_notes
+      - field_org_section
+      - field_res_description
+      - field_res_name
+      - field_subject
+      - field_subject_1
+      - field_text
+      - field_text_1
+      - field_title
+      - field_title_1
+      - title
+      - title_1
+    exceptions:
+      texan: texa
+      mexican: mexic
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+  tokenizer:
+    all_fields: false
+    fields:
+      - field_author
+      - field_capacity
+      - field_creator
+      - field_data_dict
+      - field_data_dict_1
+      - field_doc_classification_code
+      - field_doc_classification_code_1
+      - field_extras_doc_classification
+      - field_extras_keywords
+      - field_extras_notes_translated
+      - field_extras_notes_translated_1
+      - field_extras_usage_condition
+      - field_keywords
+      - field_license_id
+      - field_license_title
+      - field_license_title_1
+      - field_license_url
+      - field_name
+      - field_notes
+      - field_org_section
+      - field_res_description
+      - field_res_name
+      - field_subject
+      - field_subject_1
+      - field_text
+      - field_text_1
+      - field_title
+      - field_title_1
+      - title
+      - title_1
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  transliteration:
+    all_fields: false
+    fields:
+      - field_audience
+      - field_author
+      - field_capacity
+      - field_catalogue_type
+      - field_collection
+      - type
+      - field_creator
+      - field_creator_user_id
+      - field_creator_user_id_1
+      - field_data_dict
+      - field_data_dict_1
+      - field_doc_classification_code
+      - field_doc_classification_code_1
+      - field_extras_doc_classification
+      - field_extras_keywords
+      - field_extras_notes_translated
+      - field_extras_notes_translated_1
+      - field_extras_usage_condition
+      - field_id
+      - field_keywords
+      - langcode
+      - field_license_id
+      - field_license_title
+      - field_license_title_1
+      - field_license_url
+      - field_name
+      - field_notes
+      - field_org_section
+      - field_res_description
+      - field_res_name
+      - field_site_id
+      - field_subject
+      - field_subject_1
+      - field_text
+      - field_text_1
+      - field_title
+      - field_title_1
+      - title
+      - title_1
+      - title_2
+      - field_type
+      - field_version
+      - field_version_1
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: obd_en

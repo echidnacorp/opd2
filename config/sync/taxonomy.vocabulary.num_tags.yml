@@ -1,0 +1,9 @@
+uuid: 7411f088-fe89-4643-b612-44e57f0f8abe
+langcode: en
+status: true
+dependencies: {  }
+name: 'Num Tags'
+vid: num_tags
+description: ''
+hierarchy: 0
+weight: 0

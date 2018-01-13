@@ -1,0 +1,19 @@
+uuid: 9b928321-32b0-49ff-bbc8-64fb9eefb258
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_num_resources
+    - node.type.ckan_document
+id: node.ckan_document.field_num_resources
+field_name: field_num_resources
+entity_type: node
+bundle: ckan_document
+label: 'Num Resources'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

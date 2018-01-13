@@ -1,0 +1,22 @@
+uuid: cdae443f-7558-4f62-9643-2ea0c32b882e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ckan_document
+id: node.ckan_document.promote
+field_name: promote
+entity_type: node
+bundle: ckan_document
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

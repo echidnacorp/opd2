@@ -1,0 +1,29 @@
+uuid: 86fb8b4d-bd21-404b-827f-f459674663e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_view_french
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: exposedformsearch_view_frenchfrench_page
+theme: bartik
+region: sidebar_second
+weight: -10
+provider: null
+plugin: 'views_exposed_filter_block:search_view_french-french_page'
+settings:
+  id: 'views_exposed_filter_block:search_view_french-french_page'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /rechercher
+    negate: false
+    context_mapping: {  }

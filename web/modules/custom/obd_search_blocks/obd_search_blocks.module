@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Contains hooks for the OBD Search Form Module.
+ */
+
+use \Drupal\Core\Url;
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Alters language switcher for the English and French views.
+ */
+function obd_search_blocks_preprocess_links__language_block(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  if ($language == 'en') {
+    // We need to alter French link
+    $int_path = $variables['links']['fr']['link']['#url']->getInternalPath();
+    if (!empty($int_path) && strpos($int_path, 'search') !== FALSE) {
+      $variables['links']['fr']['link']['#url']= Url::fromRoute('view.search_view_french.french_page');
+    }
+  }
+  else {
+    // We need to alter English link
+    $int_path = $variables['links']['en']['link']['#url']->getInternalPath();
+    if (!empty($int_path) && strpos($int_path, 'rechercher') !== FALSE) {
+      $variables['links']['en']['link']['#url']= Url::fromRoute('view.search_view_english.search');
+    }
+  }
+}

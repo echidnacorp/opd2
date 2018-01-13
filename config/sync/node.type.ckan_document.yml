@@ -1,0 +1,17 @@
+uuid: 7b8d32cb-0cec-44ba-82e7-82191094c81c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'CKAN Document'
+type: ckan_document
+description: 'For storing documents synced from CKAN'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,21 @@
+uuid: e0e66588-8edd-436f-84e9-ab6aebf5d1b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metadata_created
+    - node.type.ckan_document
+  module:
+    - datetime
+id: node.ckan_document.field_metadata_created
+field_name: field_metadata_created
+entity_type: node
+bundle: ckan_document
+label: 'Metadata Created'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

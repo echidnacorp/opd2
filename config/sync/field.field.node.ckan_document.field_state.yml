@@ -1,0 +1,29 @@
+uuid: c5dc5c91-685d-4384-9567-2b7d79e5ed38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_state
+    - node.type.ckan_document
+    - taxonomy.vocabulary.state
+id: node.ckan_document.field_state
+field_name: field_state
+entity_type: node
+bundle: ckan_document
+label: State
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      state: state
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

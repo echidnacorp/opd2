@@ -1,0 +1,23 @@
+uuid: 4b376976-bf2c-4465-9675-592946db7dd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_views_total
+    - node.type.ckan_document
+id: node.ckan_document.field_views_total
+field_name: field_views_total
+entity_type: node
+bundle: ckan_document
+label: 'Views Total'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

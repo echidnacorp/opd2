@@ -1,0 +1,29 @@
+uuid: 43b4bc2e-d2c3-437f-9683-16a9eaf64033
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_res_type
+    - node.type.ckan_document
+    - taxonomy.vocabulary.res_type
+id: node.ckan_document.field_res_type
+field_name: field_res_type
+entity_type: node
+bundle: ckan_document
+label: 'Res Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      res_type: res_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: ac320e35-8620-4eed-b638-e6627d85a7c8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Res Type'
+vid: res_type
+description: ''
+hierarchy: 0
+weight: 0

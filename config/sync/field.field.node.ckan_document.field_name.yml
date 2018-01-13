@@ -1,0 +1,19 @@
+uuid: 7d137e65-edbb-4085-80bd-b97521a0173a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.ckan_document
+id: node.ckan_document.field_name
+field_name: field_name
+entity_type: node
+bundle: ckan_document
+label: Name
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

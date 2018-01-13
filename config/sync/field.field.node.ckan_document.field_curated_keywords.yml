@@ -1,0 +1,29 @@
+uuid: ff6b54f7-778d-4de3-a6fd-9f5225236359
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_curated_keywords
+    - node.type.ckan_document
+    - taxonomy.vocabulary.popular_cyrated_keywords
+id: node.ckan_document.field_curated_keywords
+field_name: field_curated_keywords
+entity_type: node
+bundle: ckan_document
+label: 'Curated Keywords'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      popular_cyrated_keywords: popular_cyrated_keywords
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

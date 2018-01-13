@@ -1,0 +1,23 @@
+uuid: 29d6ddc0-24e7-4e60-8f84-9996018f7246
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_views_recent
+    - node.type.ckan_document
+id: node.ckan_document.field_views_recent
+field_name: field_views_recent
+entity_type: node
+bundle: ckan_document
+label: 'Views Recent'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

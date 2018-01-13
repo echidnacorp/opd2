@@ -1,0 +1,21 @@
+uuid: 8c1f280b-1385-40e5-b2c0-06ac55f912bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_extras_date_published
+    - node.type.ckan_document
+  module:
+    - datetime
+id: node.ckan_document.field_extras_date_published
+field_name: field_extras_date_published
+entity_type: node
+bundle: ckan_document
+label: 'Extras Date Published'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

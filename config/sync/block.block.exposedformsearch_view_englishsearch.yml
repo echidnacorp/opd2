@@ -1,0 +1,29 @@
+uuid: 12f71077-0f8a-48b2-8140-faa77594b9f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_view_english
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: exposedformsearch_view_englishsearch
+theme: bartik
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'views_exposed_filter_block:search_view_english-search'
+settings:
+  id: 'views_exposed_filter_block:search_view_english-search'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

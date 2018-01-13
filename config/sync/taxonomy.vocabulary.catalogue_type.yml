@@ -1,0 +1,9 @@
+uuid: 5abe52da-6a3a-4b3f-bc50-35300c76dcc4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Catalogue Type'
+vid: catalogue_type
+description: ''
+hierarchy: 0
+weight: 0

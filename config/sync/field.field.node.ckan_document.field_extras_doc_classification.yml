@@ -1,0 +1,19 @@
+uuid: 3d21740b-f4f8-4864-b076-9d1bf14c8526
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_extras_doc_classification
+    - node.type.ckan_document
+id: node.ckan_document.field_extras_doc_classification
+field_name: field_extras_doc_classification
+entity_type: node
+bundle: ckan_document
+label: 'Extras Doc Classification Code'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
